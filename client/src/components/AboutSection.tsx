@@ -13,7 +13,7 @@ export default function AboutSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary">나를 소개합니다</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            다양한 산업분야에서 쌓은 경험과 전략적 사고로 기업의 성장을 이끌어가는 경영기획 및 경영지원 전문가입니다
+            다양한 산업분야에서의 경험과 전략적 사고로 기업의 성장을 이끌어가는 경영기획 및 경영지원 전문가입니다
           </p>
         </motion.div>
         
