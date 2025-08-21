@@ -343,7 +343,7 @@ export default function AchievementsSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold text-center mb-8">누적 성과 요약</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">숫자로 보는 성과 요약</h3>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold mb-2">420억+</div>
@@ -351,7 +351,7 @@ export default function AchievementsSection() {
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">1,300억</div>
-              <div className="text-sm opacity-90">기업가치</div>
+              <div className="text-sm opacity-90">기업가치 제고</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">26년+</div>
