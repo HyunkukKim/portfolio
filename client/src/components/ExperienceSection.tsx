@@ -64,13 +64,10 @@ export default function ExperienceSection() {
   const experiences: ExperienceItemProps[] = [
     {
       company: "(주)에이피테크놀로지",
-      position: "경영전략컨설팅",
+      position: "경영컨설팅",
       period: "2024.07 - 현재",
       description: [
-        "경영기획 (가치평가, 투자, 투자자대응)",
-        "재무/회계 (결산/감사 대응)",
-        "시스템, ERP 운영지원",
-        "전문컨설팅 업무"
+        "경영기획/지원 컨설팅"
       ],
       type: "work"
     },
@@ -79,22 +76,22 @@ export default function ExperienceSection() {
       position: "CFO/본부장/상무이사",
       period: "2005.01 - 2024.06 (19년 5개월)",
       description: [
-        "경영전략본부 총괄 (전략/경영기획/PMO, 재무/회계, 인사/총무, 시스템/IT경영)",
-        "등기 이사 (2008.2~2024.7)",
-        "재조합단백질 생산공정개발 및 소재개발 연구책임자 (2005~2017)",
-        "국내외 유수 VC 및 글로벌 SI로부터 약 420억 투자 유치"
+        "경영전략본부 총괄 (전략/경영기획, 재무/회계, 인사/총무, 시스템/IT경영)",
+        "",
+        "등기이사 (2008.2 ~ 2024.7)",
+        "",
+        "재조합단백질 공정 및 소재 연구개발 (국책과제 (연구책임자 1건 책임연구원 11건) 특허 (국내 1건 국제 1건))"
       ],
       type: "work"
     },
     {
       company: "샘표식품 (주)",
-      position: "기획/연구",
+      position: "기획/연구원",
       period: "2001.10 - 2005.01 (3년 3개월)",
       description: [
-        "GMO detection 시스템 구축",
-        "생산균주 cell banking",
-        "발효 최적화",
-        "제품 개발 (된장 및 간장 1종 출시/판매)"
+        "CMO 분석 및 발효최적화 연구 (국내학술발표 1건 특허 (국내 1건 국제 1건)",
+        "",
+        "제품 개발"
       ],
       type: "work"
     },
@@ -103,10 +100,7 @@ export default function ExperienceSection() {
       position: "연구원",
       period: "1998.02 - 2001.10 (3년 8개월)",
       description: [
-        "산업균주 개발/개량",
-        "고체/액상 발효 최적화",
-        "바이오컨버전&엔지니어링 (Biofilter/Bioremediation)",
-        "유류오염토양 복원 기술 개발"
+        "균주개발, 발효 최적화, 바이오환경 분야 연구 및 제품 개발 (국내 학술 발표 (5편) 특허 (국내 2건 국제 2건))"
       ],
       type: "work"
     },
@@ -115,10 +109,9 @@ export default function ExperienceSection() {
       position: "생물산업공학과 석사",
       period: "1995.03 - 1998.02",
       description: [
-        "전공: 생물산업공학과",
-        "학위논문: Purification and characterization of the fibrinolytic enzyme from Bacillus sp. KA38 in Jeot-Gal",
-        "공학석사 학위 취득",
-        "유전공학 및 미생물학 전문"
+        "전공: 미생물유전학 (공학석사)",
+        "",
+        "연구성과 (학술지 (국내 4편 국제 1편) 학술발표 (국내 4편 국제 3편) 특허 (국내 2건 국제 2건)"
       ],
       type: "education"
     },
