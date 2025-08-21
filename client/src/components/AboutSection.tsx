@@ -12,9 +12,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary">나를 소개합니다</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            다양한 산업분야에서의 경험과 전략적 사고로 기업의 성장을 이끌어가는 경영기획 및 경영지원 전문가입니다
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">다양한 산업분야에서의 경험과 전략적 사고로 기업의 성장을 이끌어가는 경영기획 및 경영지원 전문가입니다</p>
         </motion.div>
         
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -60,7 +58,7 @@ export default function AboutSection() {
                 <div className="w-2 h-2 bg-accent-emerald rounded-full mt-2"></div>
                 <div>
                   <h4 className="font-semibold text-secondary">데이터 기반의 의사결정</h4>
-                  <p className="text-gray-600">기업환경/기술 변화에 따른 사업 시뮬레이션 분석으로 합리적 의사결정 자료를 산출합니다</p>
+                  <p className="text-gray-600">기업환경/기술 변화에 따른 사업계획시뮬레이션 분석이 합리적 의사결정을 돕습니다</p>
                 </div>
               </div>
               
