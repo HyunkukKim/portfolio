@@ -1,0 +1,621 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 포트폴리오 웹사이트</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#1E293B',
+                        accent: '#F59E0B',
+                        muted: '#64748B'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563EB, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="font-inter scroll-smooth bg-gray-50">
+    
+    <!-- @COMPONENT: NavigationHeader -->
+    <!-- Fixed navigation header with smooth scrolling links -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-bold text-xl text-secondary">포트폴리오</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-secondary hover:text-primary transition-colors duration-300">홈</a>
+                    <a href="#about" class="text-secondary hover:text-primary transition-colors duration-300">소개</a>
+                    <a href="#skills" class="text-secondary hover:text-primary transition-colors duration-300">스킬</a>
+                    <a href="#portfolio" class="text-secondary hover:text-primary transition-colors duration-300">포트폴리오</a>
+                    <a href="#contact" class="text-secondary hover:text-primary transition-colors duration-300">연락처</a>
+                </div>
+                <button class="md:hidden text-secondary" data-event="click:toggleMobileMenu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: NavigationHeader -->
+
+    <!-- @COMPONENT: HeroSection -->
+    <!-- Hero banner with personal introduction and call-to-action -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold text-secondary mb-6">
+                    안녕하세요, <br>
+                    <span class="gradient-text">김개발자</span>입니다
+                </h1>
+                <p class="text-xl text-muted mb-8 leading-relaxed" data-mock="true">
+                    창의적인 아이디어와 기술을 결합하여 사용자에게 가치있는 경험을 제공하는 
+                    풀스택 개발자입니다. 새로운 기술에 대한 열정과 함께 항상 배우고 성장하고 있습니다.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#portfolio" class="bg-primary text-white px-8 py-4 rounded-xl font-medium hover:bg-blue-700 transition-all duration-300 text-center shadow-lg hover:shadow-xl">
+                        작업물 보기
+                    </a>
+                    <a href="#contact" class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-medium hover:bg-primary hover:text-white transition-all duration-300 text-center">
+                        연락하기
+                    </a>
+                </div>
+            </div>
+            <div class="fade-in order-first md:order-last">
+                <!-- Professional headshot photo -->
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                     alt="Professional headshot of a developer" 
+                     data-mock-image="true"
+                     class="rounded-3xl shadow-2xl w-full max-w-md mx-auto hover:scale-105 transition-transform duration-300" />
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- @COMPONENT: AboutSection -->
+    <!-- About me section with background information -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-secondary mb-4">나에 대해</h2>
+                <p class="text-muted text-lg">저를 더 자세히 알아보세요</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 fade-in">
+                    <div class="bg-gray-50 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-secondary mb-6">저의 이야기</h3>
+                        <div class="space-y-4 text-muted leading-relaxed" data-mock="true">
+                            <p>
+                                컴퓨터공학을 전공하며 개발의 세계에 첫 발을 내딛었습니다. 
+                                처음 "Hello, World!"를 출력했을 때의 그 감동을 아직도 기억하며, 
+                                그 순간부터 코딩은 저에게 단순한 업무가 아닌 열정이 되었습니다.
+                            </p>
+                            <p>
+                                5년간의 개발 경험을 통해 프론트엔드부터 백엔드까지 다양한 기술 스택을 
+                                익혀왔습니다. 특히 사용자 경험을 개선하는 일에 큰 보람을 느끼며, 
+                                항상 최신 기술 트렌드를 학습하고 적용하려 노력하고 있습니다.
+                            </p>
+                            <p>
+                                개발자로서의 목표는 단순히 동작하는 코드를 작성하는 것이 아닌, 
+                                사용자와 비즈니스에 실질적인 가치를 제공하는 제품을 만드는 것입니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6 fade-in">
+                    <div class="bg-primary text-white rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold mb-2">5+</div>
+                        <div class="text-blue-100">개발 경력</div>
+                    </div>
+                    <div class="bg-accent text-white rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold mb-2">50+</div>
+                        <div class="text-yellow-100">완료한 프로젝트</div>
+                    </div>
+                    <div class="bg-secondary text-white rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold mb-2">100%</div>
+                        <div class="text-gray-300">고객 만족도</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- @COMPONENT: SkillsSection -->
+    <!-- Skills and expertise showcase -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-secondary mb-4">전문 기술</h2>
+                <p class="text-muted text-lg">제가 다룰 수 있는 기술들을 소개합니다</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Frontend Skills -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 fade-in">
+                    <div class="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fab fa-html5 text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">프론트엔드</h3>
+                    <div class="space-y-3">
+                        <!-- @MAP: frontendSkills.map(skill => ( -->
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">React.js</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">Vue.js</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">TypeScript</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">Tailwind CSS</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full w-5/6"></div>
+                            </div>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 fade-in">
+                    <div class="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">백엔드</h3>
+                    <div class="space-y-3">
+                        <!-- @MAP: backendSkills.map(skill => ( -->
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">Node.js</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">Python</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">Express.js</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">MongoDB</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 fade-in">
+                    <div class="bg-amber-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">도구 & 기타</h3>
+                    <div class="space-y-3">
+                        <!-- @MAP: toolSkills.map(skill => ( -->
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">Git</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full w-5/6"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">Docker</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">AWS</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full w-2/3"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between" data-mock="true">
+                            <span class="text-muted">Figma</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: SkillsSection -->
+
+    <!-- @COMPONENT: PortfolioSection -->
+    <!-- Portfolio/projects gallery -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-secondary mb-4">포트폴리오</h2>
+                <p class="text-muted text-lg">제가 작업한 프로젝트들을 만나보세요</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: projects.map(project => ( -->
+                
+                <!-- Project 1: E-commerce Platform -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover:-translate-y-2">
+                    <!-- Modern e-commerce website screenshot with clean product grid layout -->
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="E-commerce platform interface" 
+                         data-mock-image="true"
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3" data-mock="true">이커머스 플랫폼</h3>
+                        <p class="text-muted mb-4" data-mock="true">React와 Node.js로 구축한 반응형 온라인 쇼핑몰. 결제 시스템과 재고 관리 기능을 포함합니다.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors" data-event="click:openProject">
+                                <i class="fas fa-external-link-alt"></i> 라이브
+                            </a>
+                            <a href="#" class="text-muted hover:text-secondary transition-colors" data-event="click:openGithub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Task Management App -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover:-translate-y-2">
+                    <!-- Clean task management dashboard with kanban boards and productivity metrics -->
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Task management dashboard" 
+                         data-mock-image="true"
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3" data-mock="true">업무 관리 시스템</h3>
+                        <p class="text-muted mb-4" data-mock="true">팀 협업을 위한 칸반 보드 스타일의 프로젝트 관리 도구. 실시간 업데이트와 알림 기능을 제공합니다.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">Tailwind</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors" data-event="click:openProject">
+                                <i class="fas fa-external-link-alt"></i> 라이브
+                            </a>
+                            <a href="#" class="text-muted hover:text-secondary transition-colors" data-event="click:openGithub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Weather App -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover:-translate-y-2">
+                    <!-- Beautiful weather app interface showing forecast cards with icons and animations -->
+                    <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Weather application interface" 
+                         data-mock-image="true"
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3" data-mock="true">날씨 앱</h3>
+                        <p class="text-muted mb-4" data-mock="true">위치 기반 날씨 정보를 제공하는 모바일 퍼스트 웹 앱. 5일 예보와 실시간 날씨 알림을 지원합니다.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">API</span>
+                            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm">PWA</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors" data-event="click:openProject">
+                                <i class="fas fa-external-link-alt"></i> 라이브
+                            </a>
+                            <a href="#" class="text-muted hover:text-secondary transition-colors" data-event="click:openGithub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Blog Platform -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover:-translate-y-2">
+                    <!-- Modern blog platform with elegant typography and content management -->
+                    <img src="https://pixabay.com/get/g0e9235b26d65cc14594eda221070d4f98a6a3fe85e5f0869cb55f348711691cdd4127e19852b8a59f6aa35b6e0414fa74707362383367885aa4640f45e9f19ae_1280.jpg" 
+                         alt="Blog platform interface" 
+                         data-mock-image="true"
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3" data-mock="true">개인 블로그 플랫폼</h3>
+                        <p class="text-muted mb-4" data-mock="true">Markdown 지원과 SEO 최적화가 적용된 개인 블로그 시스템. 댓글과 구독 기능을 포함합니다.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Next.js</span>
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">GraphQL</span>
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm">Prisma</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors" data-event="click:openProject">
+                                <i class="fas fa-external-link-alt"></i> 라이브
+                            </a>
+                            <a href="#" class="text-muted hover:text-secondary transition-colors" data-event="click:openGithub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Data Dashboard -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover:-translate-y-2">
+                    <!-- Analytics dashboard with charts, graphs and data visualization components -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Data analytics dashboard" 
+                         data-mock-image="true"
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3" data-mock="true">데이터 대시보드</h3>
+                        <p class="text-muted mb-4" data-mock="true">실시간 데이터 시각화와 분석을 위한 대시보드. 차트와 지표를 통해 비즈니스 인사이트를 제공합니다.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">D3.js</span>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Express</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors" data-event="click:openProject">
+                                <i class="fas fa-external-link-alt"></i> 라이브
+                            </a>
+                            <a href="#" class="text-muted hover:text-secondary transition-colors" data-event="click:openGithub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Music Player -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover:-translate-y-2">
+                    <!-- Beautiful music streaming app interface with album covers and audio controls -->
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Music streaming application" 
+                         data-mock-image="true"
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3" data-mock="true">음악 스트리밍 앱</h3>
+                        <p class="text-muted mb-4" data-mock="true">Spotify API를 활용한 음악 스트리밍 서비스. 플레이리스트 관리와 음성 인식 검색 기능을 지원합니다.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Spotify API</span>
+                            <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">Web Audio</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-blue-700 transition-colors" data-event="click:openProject">
+                                <i class="fas fa-external-link-alt"></i> 라이브
+                            </a>
+                            <a href="#" class="text-muted hover:text-secondary transition-colors" data-event="click:openGithub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: PortfolioSection -->
+
+    <!-- @COMPONENT: ContactSection -->
+    <!-- Contact information and form -->
+    <section id="contact" class="py-20 bg-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-white mb-4">연락하기</h2>
+                <p class="text-gray-300 text-lg">새로운 프로젝트나 협업 기회를 논의해보세요</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-white mb-6">함께 만들어가요</h3>
+                    <p class="text-gray-300 mb-8 leading-relaxed" data-mock="true">
+                        혁신적인 아이디어를 현실로 만드는 것을 좋아합니다. 
+                        새로운 프로젝트나 흥미로운 도전에 대해 이야기 나누고 싶습니다.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-medium" data-mock="true">developer@email.com</div>
+                                <div class="text-gray-400 text-sm">이메일로 연락주세요</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-medium" data-mock="true">+82 10-1234-5678</div>
+                                <div class="text-gray-400 text-sm">업무시간에 통화 가능</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-medium" data-mock="true">서울, 대한민국</div>
+                                <div class="text-gray-400 text-sm">원격 근무 가능</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 mt-8">
+                        <a href="#" class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-lg flex items-center justify-center transition-colors" data-event="click:openLinkedIn">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-lg flex items-center justify-center transition-colors" data-event="click:openGithub">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-lg flex items-center justify-center transition-colors" data-event="click:openTwitter">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-lg flex items-center justify-center transition-colors" data-event="click:openInstagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <!-- @COMPONENT: ContactForm -->
+                    <form class="space-y-6" data-event="submit:handleContactForm">
+                        <div>
+                            <label for="name" class="block text-white font-medium mb-2">이름</label>
+                            <input type="text" id="name" name="name" 
+                                   class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white/20 transition-all" 
+                                   placeholder="성함을 입력해주세요" 
+                                   data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-white font-medium mb-2">이메일</label>
+                            <input type="email" id="email" name="email" 
+                                   class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white/20 transition-all" 
+                                   placeholder="이메일 주소를 입력해주세요"
+                                   data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-white font-medium mb-2">메시지</label>
+                            <textarea id="message" name="message" rows="5" 
+                                      class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white/20 transition-all resize-none" 
+                                      placeholder="프로젝트나 협업에 대해 자세히 설명해주세요"
+                                      data-mock="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary hover:bg-blue-700 text-white py-4 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                                data-implementation="Should validate form and send email">
+                            메시지 보내기
+                        </button>
+                    </form>
+                    <!-- @END_COMPONENT: ContactForm -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- @COMPONENT: FooterSection -->
+    <!-- Footer with copyright and additional links -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-2xl font-bold text-white mb-4">김개발자</div>
+                <p class="mb-6" data-mock="true">창의적인 솔루션으로 더 나은 디지털 경험을 만들어갑니다.</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#home" class="hover:text-primary transition-colors">홈</a>
+                    <a href="#about" class="hover:text-primary transition-colors">소개</a>
+                    <a href="#skills" class="hover:text-primary transition-colors">스킬</a>
+                    <a href="#portfolio" class="hover:text-primary transition-colors">포트폴리오</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">연락처</a>
+                </div>
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-sm" data-mock="true">&copy; 2024 김개발자. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: FooterSection -->
+
+    <script>
+        // TODO: Implement smooth scrolling, animations, and interactive functionality
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Fade in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Mobile menu toggle (placeholder functionality)
+            // TODO: Implement mobile menu toggle functionality
+
+            // Form submission handling (placeholder)
+            // TODO: Implement form validation and submission logic
+
+        })();
+    </script>
+</body>
+</html>

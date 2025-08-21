@@ -92,72 +92,98 @@ export default function AchievementsSection() {
   // 부문별 업무 성과 데이터
   const strategicAchievements: AchievementProps[] = [
     {
-      title: "전략기획 및 PMO 운영",
-      description: "중장기 경영전략 수립과 전사적 프로젝트/포트폴리오 관리 총괄 책임자로서 프로젝트 지식체계 및 방법론을 적용하여 효율적인 프로젝트 관리 시스템을 구축했습니다.",
-      impact: "프로젝트 성공률 95% 달성",
+      title: "전사적 통합 관리",
+      description: "",
+      impact: "- 주요 성과: 프로젝트의 전사적 통합 관리",
       metrics: [
-        "PMO 시스템 구축 및 운영",
-        "중장기 경영전략 수립",
-        "전부서 통합 운영관리",
-        "성과분석 및 KPI 관리 체계화"
+        "PMO 운영 책임 및 프로젝트 통합 관리",
+        "단기/중기/장기 경영 및 사업계획 수립",
+        "환경/시장분석 및 수요/이익예측",
+        "성과분석 및 KPI 관리, 월단위 실적 분석, 추정재무제표"
       ],
       icon: "target",
       category: "전략/경영기획부문"
     },
     {
-      title: "투자유치 및 기업가치 관리",
-      description: "국내외 유수 VC 및 글로벌 SI로부터 전시리즈(A~C) 투자를 성공적으로 유치하고, 다양한 투자형태(BW/RCPS/CPS)를 경험하며 기업가치 1,300억원을 달성했습니다.",
-      impact: "기업가치 1,300억원 달성",
+      title: "펀딩 및 IPO 추진",
+      description: "",
+      impact: "- 주요 성과: 420억 투자 유치 (기업가치 1,300억)",
       metrics: [
-        "420억원 투자 유치",
-        "전시리즈 A~C 라운드 완료",
-        "글로벌 SI 및 VC 네트워크 구축",
-        "기업가치평가 실무 완료"
+        "국내외 VC 및 SI로부터 약 420억 투자 유치",
+        "전시리즈 및 다양한 투자형태(BW/RCPS/CPS) 경험",
+        "상장 업무(IPO) & 기술가치 평가",
+        "투자관련 VC 및 기관 네트워크 구축"
       ],
       icon: "growth",
+      category: "전략/경영기획부문"
+    },
+    {
+      title: "관리 프로세스 구축 및 지식관리",
+      description: "",
+      impact: "- 주요 성과: 관리 프로세스 구축 및 지식관리",
+      metrics: [
+        "사규의 제정/개정 및 회의체 관리",
+        "문서 체계 구축 및 온오프 관리",
+        "특허 및 국책과제 기획/관리",
+        "ESG 도입검토 및 각종 인증 획득"
+      ],
+      icon: "innovation",
       category: "전략/경영기획부문"
     }
   ];
 
   const financeAchievements: AchievementProps[] = [
     {
-      title: "재무회계 체계 구축 및 IFRS 전환",
-      description: "kGAAP에서 IFRS로의 전환을 총괄하고, 내부회계관리제도를 구축하여 투명한 재무관리 체계를 확립했습니다.",
-      impact: "회계투명성 및 신뢰성 확보",
+      title: "회계 파트",
+      description: "",
+      impact: "- 주요 성과: 투명한 재무관리 및 결산 체계 구축",
       metrics: [
-        "IFRS 전환 성공적 완료",
+        "회계규정 및 공시 프로세스 구축",
+        "kGAAP에서 IFRS로의 전환 도입",
         "내부회계관리제도 구축",
-        "결산 및 세무관리 체계화",
-        "다수의 외부 DD 성공적 대응"
+        "결산 및 세무 관리 (kGAAP/kIFRS, 부가세/법인세)"
       ],
       icon: "analytics",
       category: "재무/회계 부문"
     },
     {
-      title: "코스닥 IPO 기술성평가특례 추진",
-      description: "코스닥 기술성평가특례 상장을 위한 전담 실무 및 총괄업무를 수행하며, 기술성 및 사업성 평가를 체계적으로 관리했습니다.",
-      impact: "IPO 추진 기반 구축",
+      title: "자금 파트",
+      description: "",
+      impact: "- 주요 성과: 체계적 자금 운영",
       metrics: [
-        "코스닥 기술성평가특례 실무 총괄",
-        "기업/기관 네트워크 구축",
-        "상장 준비 체계 구축",
-        "재무실사 대응 완료"
+        "단기/중기/장기 예산 수립 및 통제",
+        "CF 분석, 영업 및 영업외 수지 예측",
+        "매출채권/매입채무 관리 (사채, 당좌, 어음)",
+        "투자금 관리 및 관련 행정"
       ],
       icon: "finance",
+      category: "재무/회계 부문"
+    },
+    {
+      title: "원가회계 파트",
+      description: "",
+      impact: "- 주요 성과: 제품별 원가 추정 시스템 구축",
+      metrics: [
+        "재고관리 (재고수불부) 교육 및 전산화",
+        "원가 분석 및 제품별/사업부문별 분석",
+        "전사 손익분기점 분석",
+        "원가 효율성 개선"
+      ],
+      icon: "analytics",
       category: "재무/회계 부문"
     }
   ];
 
   const hrAchievements: AchievementProps[] = [
     {
-      title: "인사제도 구축 및 조직관리",
-      description: "전사 인사제도 개선과 조직 효율성 제고를 위한 체계적인 인사관리 시스템을 구축하고 운영했습니다.",
-      impact: "조직 효율성 30% 향상",
+      title: "인사/총무 부문",
+      description: "",
+      impact: "- 주요 성과: 체계적 인재 성과관리 시스템 확보",
       metrics: [
-        "인사제도 체계화",
-        "조직관리 시스템 구축",
-        "성과평가 체계 개선",
-        "직무분석 및 역량관리"
+        "인재채용 시스템 및 인사고과 평가 시스템 구축 (MBO)",
+        "노무관리 (채용, 입사, 퇴직, 보직 및 노사 대응)",
+        "년간 교육 프로그램 구축 및 복리후생 계획 수립",
+        "원천세 업무 검토 및 총괄 (노무법인 협업/관리)"
       ],
       icon: "team",
       category: "인사/총무 부문"
@@ -166,14 +192,14 @@ export default function AchievementsSection() {
 
   const itAchievements: AchievementProps[] = [
     {
-      title: "ERP 시스템 도입 및 디지털 전환",
-      description: "전사 ERP 시스템(인사, 회계, 영업, 생산 모듈 포함) 도입을 총괄하고, 문서 중앙화 시스템 구축으로 업무 효율성을 대폭 개선했습니다.",
-      impact: "업무 효율성 40% 향상",
+      title: "시스템/IT 부문",
+      description: ": 중요데이터의 보안/보관 시스템 기반위에 ERP를 구축하여 다양한 경영시각화를 꾀하였습니다.",
+      impact: "- 주요 성과: 디지털 전환 체계 구축",
       metrics: [
-        "ERP 시스템 전 모듈 구축",
-        "문서 중앙화 시스템 도입",
-        "BI 형태 보고 체계 구축",
-        "전산자산 관리 시스템 구축"
+        "문서 중앙화 도입/구축 (서버 및 데이터 관리 총괄)",
+        "ERP 도입/구축 (인사, 회계, 영업, 생산 모듈 포함)",
+        "경영보고 최적화 (화상회의, BI 보고 체계 구축)",
+        "전산자산 관리 총괄 (소프트웨어, 하드웨어)"
       ],
       icon: "innovation",
       category: "시스템/IT 경영 부문"
@@ -182,14 +208,14 @@ export default function AchievementsSection() {
 
   const researchAchievements: AchievementProps[] = [
     {
-      title: "연구개발 및 특허 관리",
-      description: "재조합단백질 생산기술 개발 연구책임자로서 국책과제를 수행하고, 특허관리 및 신제품 개발방향을 제시했습니다.",
-      impact: "12건 국책과제 완료",
+      title: "연구분야 (연구원으로서)",
+      description: "",
+      impact: "- 주요 성과: 연구개발 성과 창출",
       metrics: [
-        "연구책임자 1건, 책임연구원 11건",
-        "국내외 특허 다수 보유",
-        "특허 포트폴리오 구성",
-        "신제품 개발방향 제시"
+        "학술지 (국내 4편 국외 1편)",
+        "학술발표 (국내 10편 국외 3편)",
+        "특허 (국내 6건 국제 6건)",
+        "국책과제 (총괄책임 1건 참여연구원 12건)"
       ],
       icon: "team",
       category: "연구부문"
@@ -216,8 +242,9 @@ export default function AchievementsSection() {
         
         {/* 전략/경영기획부문 */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8 text-secondary">전략/경영기획부문</h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h3 className="text-2xl font-bold text-center mb-4 text-secondary">전략/경영기획부문</h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {strategicAchievements.map((achievement, index) => (
               <motion.div
                 key={achievement.title}
@@ -234,7 +261,8 @@ export default function AchievementsSection() {
 
         {/* 재무/회계 부문 */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8 text-secondary">재무/회계 부문</h3>
+          <h3 className="text-2xl font-bold text-center mb-4 text-secondary">재무/회계 부문</h3>
+
           <div className="grid md:grid-cols-2 gap-8">
             {financeAchievements.map((achievement, index) => (
               <motion.div
@@ -252,7 +280,8 @@ export default function AchievementsSection() {
 
         {/* 인사/총무 부문 */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8 text-secondary">인사/총무 부문</h3>
+          <h3 className="text-2xl font-bold text-center mb-4 text-secondary">인사/총무 부문</h3>
+
           <div className="grid md:grid-cols-2 gap-8">
             {hrAchievements.map((achievement, index) => (
               <motion.div
@@ -270,7 +299,8 @@ export default function AchievementsSection() {
 
         {/* 시스템/IT 경영 부문 */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8 text-secondary">시스템/IT 경영 부문</h3>
+          <h3 className="text-2xl font-bold text-center mb-4 text-secondary">시스템/IT 경영 부문</h3>
+
           <div className="grid md:grid-cols-2 gap-8">
             {itAchievements.map((achievement, index) => (
               <motion.div
@@ -288,7 +318,8 @@ export default function AchievementsSection() {
 
         {/* 연구부문 */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8 text-secondary">연구부문</h3>
+          <h3 className="text-2xl font-bold text-center mb-4 text-secondary">연구부문</h3>
+
           <div className="grid md:grid-cols-2 gap-8">
             {researchAchievements.map((achievement, index) => (
               <motion.div
@@ -328,7 +359,7 @@ export default function AchievementsSection() {
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">19년+</div>
-              <div className="text-sm opacity-90">CFO 경험</div>
+              <div className="text-sm opacity-90">경영기획경력</div>
             </div>
           </div>
         </motion.div>

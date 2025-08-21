@@ -89,8 +89,8 @@ export default function ExperienceSection() {
       position: "기획/연구원",
       period: "2001.10 - 2005.01 (3년 3개월)",
       description: [
-        "CMO 분석 및 발효최적화 연구",
-        "(국내학술발표 1건 특허 (국내 1건 국제 1건))",
+        "GMO 분석 및 발효최적화 연구",
+        "국내학술발표 1건 특허 (국내 1건 국제 1건)",
         "",
         "제품 개발"
       ],
@@ -102,7 +102,7 @@ export default function ExperienceSection() {
       period: "1998.02 - 2001.10 (3년 8개월)",
       description: [
         "균주개발, 발효 최적화, 바이오환경 분야 연구 및 제품 개발",
-        "(국내 학술 발표 (5편) 특허 (국내 2건 국제 2건))"
+        "국내 학술 발표 (5편) 특허 (국내 2건 국제 2건)"
       ],
       type: "work"
     },
@@ -129,9 +129,9 @@ export default function ExperienceSection() {
   ];
 
   const certifications = [
-    "PMP (Project Management Professional) - PMI (USA)",
-    "기업·기술가치평가사(KCVA) - 한국기업기술가치평가협회",
-    "가치분석사 (VAS) - 한국기업기술가치평가협회",
+    "PMP (Project Management Professional)\n- PMI (USA)",
+    "기업·기술가치평가사(KCVA)\n- 한국기업기술가치평가협회",
+    "가치분석사 (VAS)\n- 한국기업기술가치평가협회",
     "무형자산 가치평가 실무과정 수료",
     "국제공인가치평가사(ICVS) 양성과정 수료",
     "PRINCE2 자격 교육과정 수료"
