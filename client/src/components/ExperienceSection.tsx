@@ -50,7 +50,7 @@ function ExperienceItem({ company, position, period, description, type }: Experi
         <ul className="space-y-2">
           {description.map((item, index) => (
             <li key={index} className="text-gray-600 flex items-start">
-              <span className="w-2 h-2 bg-accent-emerald rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              {item.trim() !== "" && <span className="w-2 h-2 bg-accent-emerald rounded-full mt-2 mr-3 flex-shrink-0"></span>}
               {item}
             </li>
           ))}
@@ -89,7 +89,8 @@ export default function ExperienceSection() {
       position: "기획/연구원",
       period: "2001.10 - 2005.01 (3년 3개월)",
       description: [
-        "CMO 분석 및 발효최적화 연구 (국내학술발표 1건 특허 (국내 1건 국제 1건)",
+        "CMO 분석 및 발효최적화 연구",
+        "(국내학술발표 1건 특허 (국내 1건 국제 1건))",
         "",
         "제품 개발"
       ],
@@ -100,7 +101,8 @@ export default function ExperienceSection() {
       position: "연구원",
       period: "1998.02 - 2001.10 (3년 8개월)",
       description: [
-        "균주개발, 발효 최적화, 바이오환경 분야 연구 및 제품 개발 (국내 학술 발표 (5편) 특허 (국내 2건 국제 2건))"
+        "균주개발, 발효 최적화, 바이오환경 분야 연구 및 제품 개발",
+        "(국내 학술 발표 (5편) 특허 (국내 2건 국제 2건))"
       ],
       type: "work"
     },
@@ -111,7 +113,7 @@ export default function ExperienceSection() {
       description: [
         "전공: 미생물유전학 (공학석사)",
         "",
-        "연구성과 (학술지 (국내 4편 국제 1편) 학술발표 (국내 4편 국제 3편) 특허 (국내 2건 국제 2건)"
+        "학술지 (국내 4편 국제 1편) 학술발표 (국내 4편 국제 3편) 특허 (국내 2건 국제 2건)"
       ],
       type: "education"
     },
@@ -120,10 +122,7 @@ export default function ExperienceSection() {
       position: "생물공학과 학사",
       period: "1991.03 - 1995.02",
       description: [
-        "전공: 생물공학과",
-        "공학사 학위 취득",
-        "미생물 유전학 전문",
-        "기초 연구 및 실험 기법 습득"
+        "전공: 생물공학 (공학사)"
       ],
       type: "education"
     }
@@ -141,81 +140,45 @@ export default function ExperienceSection() {
   return (
     <section id="experience" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary">이력 및 경력</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            다양한 산업분야에서 쌓아온 풍부한 경험과 전문성을 소개합니다
-          </p>
-        </div>
-        
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {/* Work Experience */}
-          <div>
-            <h3 className="text-2xl font-bold text-secondary mb-8 flex items-center">
-              <Briefcase className="mr-3 text-accent-blue" />
-              주요 경력
-            </h3>
-            <div className="space-y-6">
-              {experiences.filter(exp => exp.type === "work").map((exp, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <ExperienceItem {...exp} />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Education */}
-          <div>
-            <h3 className="text-2xl font-bold text-secondary mb-8 flex items-center">
-              <GraduationCap className="mr-3 text-accent-emerald" />
-              학력
-            </h3>
-            <div className="space-y-6">
-              {experiences.filter(exp => exp.type === "education").map((exp, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <ExperienceItem {...exp} />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-        
-        {/* Certifications */}
         <motion.div 
-          className="bg-white rounded-2xl p-8 shadow-lg"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold text-secondary mb-6 flex items-center justify-center">
-            <Award className="mr-3 text-purple-500" />
-            자격증 및 인증
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary">이력 및 경력</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            다양한 산업분야에서의 풍부한 경험과 전문성을 바탕으로 성장해온 여정을 소개합니다
+          </p>
+        </motion.div>
+
+        <div className="space-y-8 mb-16">
+          {experiences.map((experience, index) => (
+            <ExperienceItem key={index} {...experience} />
+          ))}
+        </div>
+
+        <motion.div 
+          className="bg-white rounded-2xl shadow-lg p-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-bold text-center mb-8 text-secondary">자격증 및 인증</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <motion.div
+              <motion.div 
                 key={index}
-                className="bg-purple-50 text-purple-800 px-4 py-3 rounded-lg text-center font-semibold"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center p-4 bg-gradient-to-r from-accent-blue/5 to-accent-emerald/5 rounded-lg"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                data-testid={`cert-${index}`}
               >
-                {cert}
+                <Award className="text-accent-blue mr-3 flex-shrink-0" size={20} />
+                <span className="text-gray-700 text-sm" data-testid={`cert-${index}`}>{cert}</span>
               </motion.div>
             ))}
           </div>
