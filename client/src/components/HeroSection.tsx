@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import profileImage from "@assets/main image_1755755702718.jpeg";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -25,31 +26,24 @@ export default function HeroSection() {
       >
         <div className="mb-8">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300" 
-            alt="김도현 프로필 사진" 
+            src={profileImage} 
+            alt="김현국 프로필 사진" 
             className="w-32 h-32 rounded-full mx-auto border-4 border-white/30 shadow-2xl object-cover"
             data-testid="img-profile"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
           안녕하세요, <br />
-          <span className="text-accent-emerald">김도현</span>입니다
+          <span className="text-accent-emerald">김현국</span> 입니다
         </h1>
         <p className="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto leading-relaxed">
-          창의적인 아이디어와 기술을 결합하여 <br />
-          사용자 경험을 혁신하는 풀스택 개발자
+          다양한 산업분야와 업무영역을 경험한 <br />
+          경영기획 및 경영지원 전문가
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button 
-            onClick={() => scrollToSection('portfolio')}
-            className="bg-accent-emerald hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
-            data-testid="button-view-work"
-          >
-            작업 보기
-          </button>
-          <button 
             onClick={() => scrollToSection('contact')}
-            className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
+            className="bg-accent-emerald hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
             data-testid="button-contact"
           >
             연락하기

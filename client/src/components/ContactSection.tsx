@@ -89,7 +89,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary">이메일</h4>
-                  <p className="text-gray-600" data-testid="text-email">dohyun.kim@example.com</p>
+                  <p className="text-gray-600" data-testid="text-email">hyungook.kim@example.com</p>
                 </div>
               </div>
               

@@ -1,8 +1,8 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import PortfolioSection from "@/components/PortfolioSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import AchievementsSection from "@/components/AchievementsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -12,8 +12,8 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <SkillsSection />
-      <PortfolioSection />
+      <ExperienceSection />
+      <AchievementsSection />
       <ContactSection />
       <Footer />
     </div>

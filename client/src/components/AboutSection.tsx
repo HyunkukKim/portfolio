@@ -13,7 +13,7 @@ export default function AboutSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary">나를 소개합니다</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            기술에 대한 열정과 창의적 사고로 혁신적인 솔루션을 만들어가는 개발자입니다
+            다양한 산업분야에서 쌓은 경험과 전략적 사고로 기업의 성장을 이끌어가는 경영전문가입니다
           </p>
         </motion.div>
         
@@ -39,35 +39,35 @@ export default function AboutSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-secondary mb-6">개발자가 된 이유</h3>
+            <h3 className="text-2xl font-bold text-secondary mb-6">경영전문가로서의 여정</h3>
             <p className="text-gray-700 leading-relaxed">
-              어린 시절부터 컴퓨터와 기술에 매료되어 있었고, 코드 한 줄로 세상을 바꿀 수 있다는 
-              가능성에 흥미를 느꼈습니다. 사용자의 니즈를 파악하고 이를 기술적으로 구현하여 
-              실질적인 가치를 창출하는 것이 저의 가장 큰 동력입니다.
+              다양한 산업분야에서 축적한 경험을 바탕으로 기업의 전략수립부터 실행까지 
+              체계적으로 접근하는 것이 저의 강점입니다. 복잡한 비즈니스 환경에서 
+              최적의 솔루션을 찾아내고 실질적인 성과를 만들어내는 것이 저의 가장 큰 보람입니다.
             </p>
             
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 bg-accent-blue rounded-full mt-2"></div>
                 <div>
-                  <h4 className="font-semibold text-secondary">문제 해결 지향적 사고</h4>
-                  <p className="text-gray-600">복잡한 문제를 단순하고 효율적인 솔루션으로 풀어내는 것을 추구합니다</p>
+                  <h4 className="font-semibold text-secondary">전략적 사고</h4>
+                  <p className="text-gray-600">거시적 관점에서 사업을 바라보고 체계적인 전략을 수립하여 실행합니다</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 bg-accent-emerald rounded-full mt-2"></div>
                 <div>
-                  <h4 className="font-semibold text-secondary">지속적인 학습</h4>
-                  <p className="text-gray-600">빠르게 변화하는 기술 트렌드에 맞춰 꾸준히 학습하고 성장합니다</p>
+                  <h4 className="font-semibold text-secondary">데이터 기반 의사결정</h4>
+                  <p className="text-gray-600">정확한 데이터 분석을 통해 합리적이고 효과적인 의사결정을 내립니다</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                 <div>
-                  <h4 className="font-semibold text-secondary">협업과 소통</h4>
-                  <p className="text-gray-600">팀워크를 중시하며 명확한 커뮤니케이션을 통해 프로젝트를 성공으로 이끕니다</p>
+                  <h4 className="font-semibold text-secondary">조직 운영 및 관리</h4>
+                  <p className="text-gray-600">효율적인 조직 운영과 체계적인 업무 관리를 통해 성과를 극대화합니다</p>
                 </div>
               </div>
             </div>

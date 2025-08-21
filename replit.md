@@ -1,10 +1,15 @@
 # Overview
 
-This is a modern portfolio website built with React and Express.js, showcasing a developer's skills, projects, and contact information. The application features a single-page design with smooth scrolling navigation, responsive layout, and form handling capabilities. The site includes sections for hero introduction, about, skills showcase, portfolio projects, and contact form submission.
+This is a modern portfolio website built with React and Express.js for 김현국, showcasing a business management professional's experience, career history, and achievements. The application features a single-page design with smooth scrolling navigation, responsive layout, and form handling capabilities. The site includes sections for hero introduction, about, career & education history, major business achievements, and contact form submission.
 
 # User Preferences
 
-Preferred communication style: Simple, everyday language.
+Preferred communication style: Simple, everyday language (Korean).
+Name: 김현국 (Kim Hyun-gook)
+Profession: 경영기획 및 경영지원 전문가 (Business Planning and Management Support Specialist)
+Profile image: Uses attached photo displayed in circular format
+Remove "작업보기" (View Work) button from hero section
+Navigation sections: 홈, 소개, 이력 및 경력, 주요 업무성과, 연락처
 
 # System Architecture
 

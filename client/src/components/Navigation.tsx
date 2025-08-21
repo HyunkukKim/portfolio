@@ -17,7 +17,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-xl font-bold text-primary cursor-pointer" onClick={() => scrollToSection('home')}>
-            김도현
+            김현국
           </div>
           
           {/* Desktop Navigation */}
@@ -37,18 +37,18 @@ export default function Navigation() {
               소개
             </button>
             <button 
-              onClick={() => scrollToSection('skills')}
+              onClick={() => scrollToSection('experience')}
               className="text-gray-700 hover:text-primary transition-colors duration-300"
-              data-testid="nav-skills"
+              data-testid="nav-experience"
             >
-              기술
+              이력 및 경력
             </button>
             <button 
-              onClick={() => scrollToSection('portfolio')}
+              onClick={() => scrollToSection('achievements')}
               className="text-gray-700 hover:text-primary transition-colors duration-300"
-              data-testid="nav-portfolio"
+              data-testid="nav-achievements"
             >
-              포트폴리오
+              주요 업무성과
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
@@ -88,18 +88,18 @@ export default function Navigation() {
                 소개
               </button>
               <button 
-                onClick={() => scrollToSection('skills')}
+                onClick={() => scrollToSection('experience')}
                 className="text-gray-700 hover:text-primary transition-colors duration-300 text-left"
-                data-testid="mobile-nav-skills"
+                data-testid="mobile-nav-experience"
               >
-                기술
+                이력 및 경력
               </button>
               <button 
-                onClick={() => scrollToSection('portfolio')}
+                onClick={() => scrollToSection('achievements')}
                 className="text-gray-700 hover:text-primary transition-colors duration-300 text-left"
-                data-testid="mobile-nav-portfolio"
+                data-testid="mobile-nav-achievements"
               >
-                포트폴리오
+                주요 업무성과
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
