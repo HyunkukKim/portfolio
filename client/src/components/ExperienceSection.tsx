@@ -63,72 +63,86 @@ function ExperienceItem({ company, position, period, description, type }: Experi
 export default function ExperienceSection() {
   const experiences: ExperienceItemProps[] = [
     {
-      company: "글로벌 제조기업",
-      position: "경영기획팀 팀장",
-      period: "2020.03 - 현재",
+      company: "(주)에이피테크놀로지",
+      position: "경영전략컨설팅",
+      period: "2024.07 - 현재",
       description: [
-        "중장기 경영전략 수립 및 실행 관리",
-        "신사업 기회 발굴 및 사업성 검토",
-        "경영진 보고서 작성 및 의사결정 지원",
-        "예산 편성 및 성과 관리 체계 구축"
+        "경영기획 (가치평가, 투자, 투자자대응)",
+        "재무/회계 (결산/감사 대응)",
+        "시스템, ERP 운영지원",
+        "전문컨설팅 업무"
       ],
       type: "work"
     },
     {
-      company: "대기업 계열사",
-      position: "경영지원팀 과장",
-      period: "2017.01 - 2020.02",
+      company: "(주)에이피테크놀로지",
+      position: "CFO/본부장/상무이사",
+      period: "2005.01 - 2024.06 (19년 5개월)",
       description: [
-        "조직 운영 효율화 프로젝트 기획 및 실행",
-        "업무 프로세스 개선 및 표준화",
-        "인사제도 개선 및 성과평가 시스템 구축",
-        "경영정보 시스템 도입 및 운영"
+        "경영전략본부 총괄 (전략/경영기획/PMO, 재무/회계, 인사/총무, 시스템/IT경영)",
+        "등기 이사 (2008.2~2024.7)",
+        "재조합단백질 생산공정개발 및 소재개발 연구책임자 (2005~2017)",
+        "국내외 유수 VC 및 글로벌 SI로부터 약 420억 투자 유치"
       ],
       type: "work"
     },
     {
-      company: "컨설팅 회사",
-      position: "시니어 컨설턴트",
-      period: "2014.03 - 2016.12",
+      company: "샘표식품 (주)",
+      position: "기획/연구",
+      period: "2001.10 - 2005.01 (3년 3개월)",
       description: [
-        "중소기업 경영진단 및 개선방안 제시",
-        "사업 재구조화 및 비용 절감 프로젝트",
-        "조직문화 개선 및 변화관리",
-        "정부 지원사업 기획 및 신청 지원"
+        "GMO detection 시스템 구축",
+        "생산균주 cell banking",
+        "발효 최적화",
+        "제품 개발 (된장 및 간장 1종 출시/판매)"
       ],
       type: "work"
     },
     {
-      company: "서울대학교",
-      position: "경영학 석사",
-      period: "2012.03 - 2014.02",
+      company: "(주)아이비진 (구. 인바이오넷)",
+      position: "연구원",
+      period: "1998.02 - 2001.10 (3년 8개월)",
       description: [
-        "전공: 경영전략 및 조직관리",
-        "논문: '중소기업의 디지털 전환과 경영성과'",
-        "학점: 4.3/4.5",
-        "우수논문상 수상"
+        "산업균주 개발/개량",
+        "고체/액상 발효 최적화",
+        "바이오컨버전&엔지니어링 (Biofilter/Bioremediation)",
+        "유류오염토양 복원 기술 개발"
+      ],
+      type: "work"
+    },
+    {
+      company: "부경대학교",
+      position: "생물산업공학과 석사",
+      period: "1995.03 - 1998.02",
+      description: [
+        "전공: 생물산업공학과",
+        "학위논문: Purification and characterization of the fibrinolytic enzyme from Bacillus sp. KA38 in Jeot-Gal",
+        "공학석사 학위 취득",
+        "유전공학 및 미생물학 전문"
       ],
       type: "education"
     },
     {
-      company: "경희대학교",
-      position: "경영학 학사",
-      period: "2008.03 - 2012.02",
+      company: "부경대학교",
+      position: "생물공학과 학사",
+      period: "1991.03 - 1995.02",
       description: [
-        "전공: 경영학과",
-        "부전공: 국제통상학",
-        "학점: 4.1/4.5",
-        "졸업작품 우수상 수상"
+        "전공: 생물공학과",
+        "공학사 학위 취득",
+        "미생물 유전학 전문",
+        "기초 연구 및 실험 기법 습득"
       ],
       type: "education"
     }
   ];
 
   const certifications = [
-    "경영지도사 (중소벤처기업부)",
-    "투자자산운용사 (금융투자협회)",
-    "프로젝트관리전문가 (PMP)",
-    "디지털 혁신 전문가 (DIAT)"
+    "PMP (Project Management Professional) - PMI (USA)",
+    "기업·기술가치평가사(KCVA) - 한국기업기술가치평가협회",
+    "가치분석사 (VAS) - 한국기업기술가치평가협회",
+    "무형자산 가치평가 실무과정 수료",
+    "국제공인가치평가사(ICVS) 양성과정 수료",
+    "PRINCE2 자격 교육과정 수료"
   ];
 
   return (

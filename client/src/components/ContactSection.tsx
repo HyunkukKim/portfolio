@@ -89,7 +89,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary">이메일</h4>
-                  <p className="text-gray-600" data-testid="text-email">hyungook.kim@example.com</p>
+                  <p className="text-gray-600" data-testid="text-email">silmangiya72@gmail.com</p>
                 </div>
               </div>
               
@@ -99,7 +99,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary">전화번호</h4>
-                  <p className="text-gray-600" data-testid="text-phone">+82 10-1234-5678</p>
+                  <p className="text-gray-600" data-testid="text-phone">+82-10-2445-7207</p>
                 </div>
               </div>
               
@@ -109,7 +109,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary">위치</h4>
-                  <p className="text-gray-600" data-testid="text-location">서울, 대한민국</p>
+                  <p className="text-gray-600" data-testid="text-location">경기도 화성시 거주, 대한민국</p>
                 </div>
               </div>
             </div>
