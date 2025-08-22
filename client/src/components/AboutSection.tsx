@@ -37,7 +37,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-secondary mb-6">경영전문가로서의 여정</h3>
+            <h3 className="text-2xl font-bold text-secondary mb-6">경영기획분야 전문가로서의 여정</h3>
             <p className="text-gray-700 leading-relaxed">
               다양한 산업 분야에서의 연구/개발, 사업/전략기획, 생산 등의 넓은 업무 스펙트럼과 함께 경영기획/지원을 
               전문 분야로 하고 있습니다. 바이오 분야 연구원 출신 CFO 및 경영전략본부장으로서 경영기획/전략기획, 
