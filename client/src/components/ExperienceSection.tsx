@@ -63,9 +63,19 @@ function ExperienceItem({ company, position, period, description, type }: Experi
 export default function ExperienceSection() {
   const experiences: ExperienceItemProps[] = [
     {
+      company: "(주)엠피오스",
+      position: "CFO/COO/전무이사",
+      period: "2025.09 - 현재",
+      description: [
+        "사업전략, 경영기획 총괄",
+        "재무/회계 총괄"
+      ],
+      type: "work"
+    },
+    {
       company: "(주)에이피테크놀로지",
       position: "경영컨설팅",
-      period: "2024.07 - 현재",
+      period: "2024.07 - 2025.08",
       description: [
         "경영기획/지원 컨설팅"
       ],
