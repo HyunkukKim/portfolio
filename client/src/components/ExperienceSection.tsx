@@ -65,7 +65,7 @@ export default function ExperienceSection() {
     {
       company: "(주)엠피오스",
       position: "CFO/COO/전무이사",
-      period: "2025.01 - 2025.10",
+      period: "2025.09 - 현재",
       description: [
         "사업전략, 경영기획 총괄",
         "재무/회계 총괄"
@@ -123,7 +123,7 @@ export default function ExperienceSection() {
       description: [
         "전공: 미생물유전학 (공학석사)",
         "",
-        "학술지 (국내 4편 국제 1편) 학술발표 (국내 4편 국제 3편) 특허 (국내 2건 국제 2건)"
+        "학술지 (국내 4편 국제 1편) 학술발표 (국내 4편 국제 3편) 특허 (국내 2편 국제 2편)"
       ],
       type: "education"
     },
