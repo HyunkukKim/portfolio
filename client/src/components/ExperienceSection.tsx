@@ -65,7 +65,7 @@ export default function ExperienceSection() {
     {
       company: "(주)엠피오스",
       position: "CFO/COO/전무이사",
-      period: "2025.09 - 현재",
+      period: "2025.09 - 2025.10",
       description: [
         "사업전략, 경영기획 총괄",
         "재무/회계 총괄"
