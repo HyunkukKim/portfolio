@@ -63,8 +63,19 @@ function ExperienceItem({ company, position, period, description, type }: Experi
 export default function ExperienceSection() {
   const experiences: ExperienceItemProps[] = [
     {
+      company: "(주)해나눔",
+      position: "CFO/CBO/CTO/부사장",
+      period: "2026.03 - 현재",
+      description: [
+        "사업전략, 경영기획 총괄",
+        "재무/회계 총괄",
+        "연구개발 총괄"
+      ],
+      type: "work"
+    },
+    {
       company: "(주)엠피오스",
-      position: "CFO/COO/전무이사",
+      position: "CFO/COO/CTO/전무이사",
       period: "2025.09 - 2025.10",
       description: [
         "사업전략, 경영기획 총괄",
@@ -83,13 +94,11 @@ export default function ExperienceSection() {
     },
     {
       company: "(주)에이피테크놀로지",
-      position: "CFO/본부장/상무이사",
+      position: "CFO/경영전략본부장/수석연구원/상무이사",
       period: "2005.01 - 2024.06 (19년 5개월)",
       description: [
         "경영전략본부 총괄 (전략/경영기획, 재무/회계, 인사/총무, 시스템/IT경영)",
-        "",
         "등기이사 (2008.2 ~ 2024.7)",
-        "",
         "재조합단백질 공정 및 소재 연구개발 (국책과제 (연구책임자 1건 책임연구원 11건) 특허 (국내 1건 국제 1건))"
       ],
       type: "work"
@@ -101,7 +110,6 @@ export default function ExperienceSection() {
       description: [
         "GMO 분석 및 발효최적화 연구",
         "국내학술발표 1건 특허 (국내 1건 국제 1건)",
-        "",
         "제품 개발"
       ],
       type: "work"
@@ -122,7 +130,6 @@ export default function ExperienceSection() {
       period: "1995.03 - 1998.02",
       description: [
         "전공: 미생물유전학 (공학석사)",
-        "",
         "학술지 (국내 4편 국제 1편) 학술발표 (국내 4편 국제 3편) 특허 (국내 2편 국제 2편)"
       ],
       type: "education"
